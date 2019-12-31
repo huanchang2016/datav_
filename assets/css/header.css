@@ -1,0 +1,81 @@
+.project-submit-header {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    box-shadow:0px 1px 0px 0px rgba(242,242,242,1);
+}
+.project-logo-box {
+    width: 206px;
+    height: 37px;
+    overflow: hidden;
+}
+.project-navbar {
+    margin-left: 100px;
+}
+.project-navbar a {
+    font-size: 16px;
+    padding: 0 20px;
+    line-height: 120px;
+    color: #333;
+}
+.project-navbar a:hover {
+    color: #1D89CC;
+}
+.header-user-info-box {
+    flex-grow: 1;
+}
+.project-header-oper button {
+    margin-right: 20px;
+    width: 120px;
+    height: 36px;
+    overflow: hidden;
+}
+.upload-icon {
+    width: 14px;
+    height: 20px;
+    overflow: hidden;
+}
+/* user info */
+.header-user-info {
+    width: 130px;
+    height: 60px;
+    overflow: hidden;
+}
+.user-info-photo {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    background-color: #F2F8FF;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.user-info-name {
+    margin-left: 10px;
+    width: 80px;
+}
+.user-info-name p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 0;
+}
+.login-out {
+    color: #999;
+    font-size: 12px;
+}
+.header-logout-box {
+    width:120px;
+    height:36px;
+    line-height: 36px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.header-logout-box .passport-out {
+    font-size: 16px;
+    padding: 0 8px;
+}

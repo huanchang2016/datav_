@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../assets/css/app.css">
+    <link rel="stylesheet" href="./../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <style>
+        .upload-image-box, .upload-file-box {
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            background: url('./../assets/imgs/upload2.png') no-repeat center center;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        .upload-image-box input, .upload-file-box input {
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* 预览样式 */
+        .upload-image-preview {
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>图片上传</h1>
+    <div class="upload-image-box">
+        <input type="file" accept="image/*" onchange="uploadImg(event,this)">
+        <div class="upload-image-preview">
+            
+        </div>
+    </div>
+<h1>文件上传</h1>
+    <div class="upload-file-box">
+        <input type="file" onchange="uploadFile(this)">
+    </div>
+
+</body>
+<script src="./../assets/plugins/jquery/jquery.min.js"></script>
+
+<script>
+    // 上传图片
+    var URL = window.URL || window.webkitURL || window.mozURL;
+    
+
+    function uploadImg(e, dom) {
+        var e = event || e
+        var fileObj =
+            dom instanceof HTMLElement
+                ? dom.files[0]
+                : $(dom)[0].files[0];
+
+        console.log(dom.files[0]);
+        var container = document.querySelector('.upload-image-preview');
+        container.innerHTML = '';
+        $('.upload-image-preview img').src = URL.createObjectURL(fileObj);
+        var img = new Image();
+        img.src = URL.createObjectURL(fileObj);
+        img.onload = function () {
+            container.appendChild(img);
+        }
+    }
+    // 上传文件
+    function uploadFile(el) {
+        var files = el.files[0];
+        console.log(files);
+    }
+</script>
+
+</html>

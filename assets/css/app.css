@@ -1,0 +1,86 @@
+.bigdata-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+html, body {
+    background-color: #EDF1F5;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+.pointer {
+    cursor: pointer;
+}
+
+/* 确认提示框 */
+.project-confirm-modal {
+    width: 300px;
+    height: 190px;
+    color: #333;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.project-modal-title {
+    padding: 10px 20px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.project-modal-body {
+    max-height: 100px;
+    padding: 24px;
+    flex-grow: 1;
+}
+.project-modal-footer {
+    height: 40px;
+    line-height: 40px;
+}
+.project-modal-footer span {
+    width: 50%;
+    border-top: 1px solid #f1f1f1;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.project-modal-footer span:nth-child(1) {
+    border-right: 1px solid #f1f1f1;
+}
+.project-modal-footer span:nth-child(1):hover {
+    color: #dc3545;
+}
+.project-modal-footer span:nth-child(2):hover {
+    color: #1D89CC;
+}
+/* 确认提示框 */
+/* 面包屑 导航条 */
+.breadcrumb-box {
+    color: #333;
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+}
+.breadcrumb-box ul{
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}

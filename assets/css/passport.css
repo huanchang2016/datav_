@@ -1,0 +1,146 @@
+#video_container {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+#background_video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#video_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('./../imgs/test/aaa.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#main_content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    font-family: 'Microsoft YaHei';
+}
+
+.passport-header {
+    margin-top: 60px;
+}
+.passport-logo-box {
+    width: 239px;
+    height: 69px;
+    margin-left: 80px;
+    overflow: hidden;
+}
+.passport-logo-box img.passport-logo {
+    width: 100%;
+}
+/* 注册页样式 */
+.passport-logo-subtitle {
+    width:68px;
+    line-height: 69px;
+    font-size:24px;
+    font-family: 'Microsoft YaHei';
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    margin-left: 20px;
+}
+.passport-oper {
+    margin-right: 80px;
+}
+.main_content_box {
+    width: 440px;
+    margin: 120px auto 0;
+    border-radius: 4px;
+}
+.passport-form h1 {
+    width:100%;
+    height: 56px;
+    font-size: 56px;
+    line-height: 50px;
+    margin: 0 auto;
+    font-family: 'Microsoft YaHei';
+    font-weight:bold;
+    color:rgba(50,120,230,1);
+    background: linear-gradient(0deg,rgba(50,120,230,1) 0%, rgba(16,87,200,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+.passport-form-subtitle { margin-top: 38px; }
+.passport-form-subtitle>div {
+    width:96px;
+    height:38px;
+    font-size: 19px;
+    line-height: 38px;
+    background:rgba(7,34,87,1);
+    border-radius:19px;
+    color: rgba(102,159,248,1);
+}
+.passport-form-box {
+    margin-top: 40px;
+}
+.passport-form-box .form-group input {
+    height: 54px;
+    background:rgba(2,21,36,1);
+    border:1px solid rgba(89,89,89,1);
+}
+.captcha-box {
+    width: 120px;
+    height: 54px;
+    overflow: hidden;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.captcha-box img {
+    width: 100%;
+}
+/* 注册验证码 */
+.register-captcha-box {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.send-captcha {
+    font-size: 14px;
+    line-height: 54px;
+    cursor: pointer;
+    position: absolute;
+    right: 21px;
+    top: 0;
+}
+.passport-form-box form .btn {
+    height: 60px;
+}
+.passport-footer {
+    width: 100%;
+    font-size: 14px;
+    color: #2A3F5E;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+}

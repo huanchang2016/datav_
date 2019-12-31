@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录-成都审计服务网</title>
+  <link rel="stylesheet" href="./../assets/plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./../assets/css/passport.css">
+</head>
+
+<body>
+  <div id="video_container">
+    <video id="background_video" loop muted></video>
+    <div id="video_cover"></div>
+    <div id="overlay"></div>
+    <section id="main_content">
+      <div class="passport-header clear">
+        <div class="passport-logo-box float-left">
+          <img src="./../assets/imgs/logo02.png" alt="成都审计服务网" class="passport-logo">
+        </div>
+        <div class="passport-oper float-right">
+          <a href="./register.html" class="btn btn-primary btn-lg" role="button">立即注册</a>
+        </div>
+      </div>
+      <div class="main_content_box">
+        <div class="passport-form">
+          <h1 class="text-center">成都审计服务网</h1>
+          <div class="passport-form-subtitle d-flex justify-content-between">
+            <div class="text-center">常态化</div>
+            <div class="text-center">信息化</div>
+            <div class="text-center">数据化</div>
+            <div class="text-center">自动化</div>
+          </div>
+          <div class="passport-form-box">
+            <form class="needs-validation" novalidate>
+              <div class="form-group input-group-lg">
+                <input type="text" class="form-control" id="validationUsername" value="" placeholder="账号" required>
+                <div class="invalid-feedback">
+                  用户名不正确
+                </div>
+              </div>
+              <div class="form-group input-group-lg">
+                <input type="password" class="form-control" id="validationPassword" value="" placeholder="密码" required>
+                <div class="invalid-feedback">
+                  密码不正确
+                </div>
+              </div>
+              <div class="form-group input-group-lg input-group">
+                <input type="text" class="form-control" id="validationCaptcha" value="" placeholder="验证码" required>
+                <div class="input-group-append">
+                  <div class="captcha-box">
+                    <img src="./../assets/imgs/test/captcha.jpg" alt="" class="captcha-img">
+                  </div>
+                </div>
+                <div class="invalid-feedback">
+                  验证码不正确
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">立即开启招采审核</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="passport-footer text-center">
+        Copyright 1999-2019 版权所有 XXXXX   经营性网站备案信息 川ICP备17008382号-1
+      </div>
+    </section>
+  </div>
+</body>
+<script src="./../assets/plugins/bideo/bideo.js"></script>
+<script src="./../assets/js/passport.js"></script>
+<script>
+  window.addEventListener('load', function () {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+              console.log(form.checkValidity());
+              if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+              if(form.checkValidity()) {
+                  console.log('验证通过');
+              }
+          }, false);
+      });
+  }, false);
+</script>
+</html>

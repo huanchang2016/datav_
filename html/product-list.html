@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>查询结果-成都审计服务网</title>
+    <link rel="stylesheet" href="./../assets/css/app.css">
+    <link rel="stylesheet" href="./../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./../assets/css/header2.css">
+    <link rel="stylesheet" href="./../assets/css/product-list.css">
+    <link rel="stylesheet" href="./../assets/css/footer.css">
+</head>
+<body>
+    <div class="top">
+        <div class="bigdata-container">
+            <div class="header-top clearfix">
+                <div class="float-left header-navbar">
+                    <a class="text-decoration-none d-inline-block text-primary" href="/"><i class="fa fa-home"></i> &nbsp; 网站首页</a>
+                    <a class="text-decoration-none d-inline-block" href="#">信息价</a>
+                    <a class="text-decoration-none d-inline-block" href="#">市场价</a>
+                    <a class="text-decoration-none d-inline-block" href="#">历史价</a>
+                    <a class="text-decoration-none d-inline-block" href="#">行业资讯</a>
+                </div>
+                <div class="float-right user-info">
+                    <div class="d-flex align-items-center">
+                        <!-- 已登录 -->
+                        <div class="user-photo-box">
+                            <img src="./../assets/imgs/test/aaa.jpg" alt="用户头像">
+                        </div>
+                        <div class="user-name text-truncate">成都审计局成都审计局成都审计局</div>
+                        <div class="usesr-info-logout pointer">退出登录</div>
+                        <!-- 已登录 -->
+                        <!-- 未登录
+                            
+                            不能删
+
+                         -->
+                        <!-- <a href="#" class="text-decoration-none passport-out">登录</a>
+                        <span>|</span>
+                        <a href="#" class="text-decoration-none passport-out">注册</a> -->
+                        <!-- 未登录
+                        
+                            不能删
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-box">
+        <div class="bigdata-container">
+            <div class="search-form-title-box text-primary">
+                <span class="search-form-title d-inline-block">价格查询</span>
+                <span class="search-form-des d-inline-block">全面、及时、专业、权威招采服务平台</span>
+            </div>
+            <div class="search-form-box">
+                <form action="">
+                    <div class="input-group mb-3 input-icon-box">
+                        <span class="input-group-icon">
+                            <i class="fa fa-search"></i>
+                        </span>
+                        <input type="text" class="form-control" name="searchText" placeholder="请输入您要查询项的关键词" aria-label="请输入您要查询项的关键词" aria-describedby="product-search-list">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary" id="product-search-list">查询</button>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="bigdata-container">
+            <div class="breadcrumb-box">
+                <ul class="clearfix">
+                    <li class="float-left">查询页 &nbsp;&gt;&nbsp; </li>
+                    <li class="float-left"><a href="#" class="text-decoration-none">土建</a></li>
+                </ul>
+            </div>
+            <div class="search-body">
+                <ul class="search-body-box">
+                    <li class="search-list clearfix"showMoreInfo>
+                        <div class="search-list-title float-left">材料分类：</div>
+                        <div class="search-list-body float-left">
+                            <div class="search-list-category">
+                                <a class="search-active text-decoration-none" href="#">土建</a>
+                                <a href="#" class="text-decoration-none">装饰</a>
+                                <a href="#" class="text-decoration-none">电器</a>
+                                <a href="#" class="text-decoration-none">给排水</a>
+                                <a href="#" class="text-decoration-none">暖通</a>
+                                <a href="#" class="text-decoration-none">市政</a>
+                                <a href="#" class="text-decoration-none">园林</a>
+                                <a href="#" class="text-decoration-none">其他</a>
+                            </div>
+                            <div class="sub-category-list">
+                                <span class="pointer sub-category-more text-primary" onClick="changeMoreInfo(this)">更多&nbsp; &nbsp;<i class="fa fa-angle-down"></i></span>
+                                <div class="sub-category-box">
+                                    <a href="#" class="text-primary text-decoration-none d-inline-block">全部</a>
+                                    <a href="#" class="text-decoration-none d-inline-block">黑色有色金属</a>
+                                    <a href="#" class="text-decoration-none d-inline-block">水泥、砖瓦灰砂石及混凝土制品</a>
+                                    <a href="#" class="text-decoration-none d-inline-block">周转材料及五金工具</a>
+                                    <a href="#" class="text-decoration-none d-inline-block">砂浆及其他配合比材料</a>
+                                    <a href="#" class="text-decoration-none d-inline-block">砂浆及其他配合比材料</a>
+                                    <a href="#" class="text-decoration-none d-inline-block">砂浆及其他配合比材料</a>
+                                    <a href="#" class="text-decoration-none d-inline-block">砂浆及其他配合比材料</a>
+                                    <a href="#" class="text-decoration-none d-inline-block">砂浆及其他配合比材料</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="search-list clearfix"showMoreInfo>
+                        <div class="search-list-title float-left">材料档次：</div>
+                        <div class="search-list-body float-left">
+                            <div class="search-list-category">
+                                <a class="text-decoration-none" href="#">全部</a>
+                                <a href="#" class="search-active text-decoration-none">高档</a>
+                                <a href="#" class="text-decoration-none">中高档</a>
+                                <a href="#" class="text-decoration-none">中档</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="search-list clearfix"showMoreInfo>
+                        <div class="search-list-title float-left">费用明细：</div>
+                        <div class="search-list-body float-left">
+                            <div class="search-list-category">
+                                <a class="text-decoration-none" href="#">全部</a>
+                                <a href="#" class="text-decoration-none">含税费</a>
+                                <a href="#" class="search-active text-decoration-none">含运费</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="search-list clearfix"showMoreInfo>
+                        <div class="search-list-title float-left">报价地区：</div>
+                        <div class="search-list-body float-left">
+                            <div class="search-list-category">
+                                <a class="text-decoration-none" href="#">全部</a>
+                                <a href="#" class="text-decoration-none">青羊区</a>
+                                <a href="#" class="text-decoration-none">高新区</a>
+                                <a href="#" class="text-decoration-none">武侯区</a>
+                                <a href="#" class="search-active text-decoration-none">天府新区</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="search-list clearfix"showMoreInfo>
+                        <div class="search-list-title float-left">报价时间：</div>
+                        <div class="search-list-body float-left">
+                            <div class="search-list-category">
+                                <a class="search-active text-decoration-none" href="#">全部</a>
+                                <a href="#" class="text-decoration-none">最近一周</a>
+                                <a href="#" class="text-decoration-none">最近一月</a>
+                                <a href="#" class="text-decoration-none">最近一年</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-result-body">
+                <div class="search-result-box">
+                    <div class="search-result-top d-flex justify-content-between">
+                        <div class="sort-box">
+                            <a href="" class="d-inline-block text-center border border-primary text-primary">时间最近</a>
+                            <a href="" class="d-inline-block text-center border border-primary bg-primary  text-white">价格最低</a>
+                        </div>
+                        <div class="result-total">
+                            共找到 <span class="text-danger">23043</span> 条数据
+                        </div>
+                    </div>
+                    <div class="search-result-list-box">
+                        <ul>
+                            <li class="result-list result-list-header bg-primary">
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="app-footer">
+        <div class="app-footer-body bg-primary">
+            <div class="bigdata-container">
+                <div class="row">
+                    <div class="col-7">
+                      <div class="footer-logo-box"><img src="./../assets/imgs/logo01.png" alt="成都审计服务网"></div>
+                      <div class="footer-nav-list">
+                          <a href="/" class="text-decoration-none">首页</a><span>|</span>
+                          <a href="/" class="text-decoration-none">信息价</a><span>|</span>
+                          <a href="/" class="text-decoration-none">市场价</a><span>|</span>
+                          <a href="/" class="text-decoration-none">行业资讯</a><span>|</span>
+                          <a href="/" class="text-decoration-none">历史采购</a><span>|</span>
+                          <a href="/" class="text-decoration-none">个人中心</a>
+                      </div>
+                    </div>
+                    <div class="col-5 clearfix">
+                      <div class="float-left footer-qr-code-box"><img src="./../assets/imgs/erweima.png" alt="成都天投"></div>
+                      <div class="float-left footer-link">
+                          <div class="footer-link-emai d-flex align-items-center">
+                              <img src="./../assets/imgs/youbain.png" alt="邮编">
+                              <span>邮编：610042</span>
+                          </div>
+                          <div class="footer-link-emai d-flex align-items-center">
+                            <img src="./../assets/imgs/dianhua.png" alt="电话">
+                            <span>028-62037262</span>
+                        </div>
+                        <div class="footer-link-emai d-flex align-items-center">
+                            <img src="./../assets/imgs/dizhi.png" alt="地址">
+                            <span>地址：成都科学城天府新经济产业园B区1-3号楼</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="footer-info text-center">
+            <p>成都天府新区投资集团有限公司  版权所有  Copyright © 2019 All Rights Reserved. ICP  备案序号：输ICP备14008233号-X  站长统计</p>
+            <div class="website-record d-flex justify-content-center align-items-center">
+                <span class="">川公网安备案  5101900200XXXX号</span>
+                <div class="website-record-img-box "><img src="./../assets/imgs/jiguan.png" alt="党政机关"></div>
+                <div class="website-record-img-box "><img src="./../assets/imgs/gongan.png" alt="公安"></div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./../assets/plugins/jquery/jquery.min.js"></script>
+<script>
+    function changeMoreInfo(el) {
+        let flag = $(el).find('i').hasClass('fa-angle-down');
+        console.log(flag);
+        if(flag) {
+            showMoreInfo(el);
+        }else {
+            hideMoreInfo(el);
+        }
+    }
+    function showMoreInfo(el) {
+        $(el).siblings('.sub-category-box').animate({ height: '100%' });
+        $(el).html(`收起&nbsp; &nbsp;<i class="fa fa-angle-up"></i>`);
+    }
+    function hideMoreInfo(el) {
+        $(el).siblings('.sub-category-box').animate({ height: '20px' });
+        $(el).html(`更多&nbsp; &nbsp;<i class="fa fa-angle-down"></i>`);
+    }
+</script>
+</html>

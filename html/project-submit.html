@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>项目提交-成都审计服务网</title>
+    <link rel="stylesheet" href="./../assets/css/app.css">
+    <link rel="stylesheet" href="./../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./../assets/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./../assets/plugins/dropzone/dropzone.min.css">
+    <!-- <link rel="stylesheet" href="./../assets/plugins/confirm/confirm.css"> -->
+    <link rel="stylesheet" href="./../assets/css/header.css">
+    <link rel="stylesheet" href="./../assets/css/project-submit.css">
+    <link rel="stylesheet" href="./../assets/css/footer.css">
+</head>
+
+<body>
+    <header class="project-submit-header">
+        <div class="bigdata-container">
+            <div class="clearfix d-flex align-items-center">
+                <div class="project-logo-box"><img src="./../assets/imgs/logo02.png" alt="成都审计服务网"></div>
+                <div class="project-navbar  clearfix">
+                    <a href="/" class="text-decoration-none">首页</a>
+                    <a href="/" class="text-decoration-none">信息价</a>
+                    <a href="/" class="text-decoration-none">市场价</a>
+                    <a href="/" class="text-decoration-none">行业资讯</a>
+                </div>
+                <div class="header-user-info-box d-flex justify-content-end align-items-center">
+                    <!-- 已登录 -->
+                    <div class="project-header-oper">
+                        <button type="button" class="btn btn-primary" onClick="uploadInfo()">
+                            <span class="upload-icon d-inline-block"><img src="./../assets/imgs/upload.png" alt=""></span>
+                            提交审计</button>
+                        <div class="d-inline-block">
+                            <div class="header-user-info d-flex align-items-center">
+                                <div class="user-info-photo"><img src="./../assets/imgs/touxiang.png"
+                                        alt=""></div>
+                                <div class="user-info-name">
+                                    <p class="font-weight-bold text-truncate">成都审计局成都审计局</p>
+                                    <span class="login-out pointer">退出登录</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 已登录 
+                        不能删
+                    -->
+                    <!-- <div class="header-logout-box bg-primary text-white text-center">
+                        <a href="" class="text-decoration-none passport-out text-white">登录</a>
+                        <span>|</span>
+                        <a href="" class="text-decoration-none passport-out text-white">注册</a>
+                    </div> -->
+                    <!-- 已登录 -->
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="project-body">
+        <div class="bigdata-container">
+            <div class="project-body-card project-body-card-title">项目提交</div>
+            <div class="project-body-card project-form-box">
+                <form class="needs-validation project-form" novalidate>
+                    <!-- 项目基本信息 start -->
+                    <div class="form-card-title font-weight-bold">项目基本信息</div>
+                    <div class="form-group row no-gutters">
+                        <label for="projectId" class="col-3 col-form-label">项目编号：</label>
+                        <div class="col-9">
+                            <input type="text" readonly class="form-control-plaintext readonly-input-value"
+                                id="projectId" value="PN201912144456">
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="projectName" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            项目名称：</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="projectName" value="" placeholder="请输入要审计的项目名称"
+                                required>
+                            <div class="invalid-feedback">
+                                审计的项目名称不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="projectAddress" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            行政区划：</label>
+                        <div class="9 address-city-box">
+                            <div class="d-inline-block address-city">成都市</div>
+                            <select class="address-select selectpicker" id="projectAddress" title="请选择所在区县" required>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                所在区县不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="buyType" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            采购方式：</label>
+                        <div class="col-9">
+                            <select class="mini-input buyType-select selectpicker" id="buyType" title="请选择采购方式"
+                                required>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="projectDate" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            定标日期：</label>
+                        <div class="col-9">
+                            <div class="input-append date mini-input datetimepicker-form form-input-icon-box"
+                                id="projectDate" data-date="" data-date-format="yyyy-mm-dd">
+                                <input class="span2" size="16" type="text" value="" placeholder="请选择定标日期" required>
+                                <span class="add-on form-input-right-icon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                            <div class="invalid-feedback">
+                                审计的定标日期不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="projectName" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            采购结果总金额：</label>
+                        <div class="col-9">
+                            <div class="form-input-icon-box mini-input">
+                                <input type="text" class="form-control" id="projectName" value=""
+                                    placeholder="请输入采购结果总金额" required>
+                                <span class="form-input-right-icon">元</span>
+                            </div>
+
+                            <div class="invalid-feedback">
+                                采购结果总金额不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 项目基本信息 end -->
+
+                    <!-- 采购人信息 start-->
+                    <div class="form-card-title font-weight-bold">采购人信息</div>
+                    <div class="form-group row no-gutters">
+                        <label for="purchaser" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            采购人：</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control mini-input" id="purchaser" value=""
+                                placeholder="请输入采购人姓名" required>
+                            <div class="invalid-feedback">
+                                采购人姓名不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="purchaserAddress" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            采购人地址：</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="purchaserAddress" value=""
+                                placeholder="请输入采购人地址" required>
+                            <div class="invalid-feedback">
+                                采购人地址不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="purchaserPhone" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            采购人联系方式：</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control mini-input" id="purchaserPhone" value=""
+                                placeholder="请输入采购人联系方式" required>
+                            <div class="invalid-feedback">
+                                采购人联系方式不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 采购人信息 end -->
+
+                    <!-- 采购代理及监督质疑信息 start-->
+                    <div class="form-card-title font-weight-bold">采购代理及监督质疑信息</div>
+                    <div class="form-group row no-gutters">
+                        <label for="purchaser-agent-user" class="col-3 col-form-label"><span
+                                class="text-danger">*</span> 采购代理机构：：</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="purchaser-agent-user" value=""
+                                placeholder="请输入采购代理机构名称" required>
+                            <div class="invalid-feedback">
+                                采购代理机构名称不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="purchaser-agent-address" class="col-3 col-form-label"><span
+                                class="text-danger">*</span> 采购代理机构地址：</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="purchaser-agent-address" value=""
+                                placeholder="请输入采购代理机构地址" required>
+                            <div class="invalid-feedback">
+                                采购代理机构地址不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="purchaser-agent-mechanism" class="col-3 col-form-label"><span
+                                class="text-danger">*</span> 集中采购监督机构：</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="purchaser-agent-mechanism" value=""
+                                placeholder="请输入集中采购监督机构" required>
+                            <div class="invalid-feedback">
+                                集中采购监督机构不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="query-question-phone" class="col-3 col-form-label"><span
+                                class="text-danger">*</span> 质疑咨询电话：</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control mini-input" id="query-question-phone" value=""
+                                placeholder="请输入质疑咨询电话" required>
+                            <div class="invalid-feedback">
+                                质疑咨询电话不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="complaint-phone" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            投诉咨询电话：</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control mini-input" id="complaint-phone" value=""
+                                placeholder="请输入投诉咨询电话" required>
+                            <div class="invalid-feedback">
+                                投诉咨询电话不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 采购代理及监督质疑信息 end -->
+
+                    <!-- 供应商/评审及其他信息 start -->
+                    <div class="form-card-title font-weight-bold">供应商/评审及其他信息</div>
+                    <div class="form-group row no-gutters">
+                        <label for="supplier-company-name" class="col-3 col-form-label"><span
+                                class="text-danger">*</span> 中标/成交供应商1：：</label>
+                        <div class="col-9">
+                            <div class="row no-gutters">
+                                <div class="col-7">
+                                    <div class="mini-input form-group">
+                                        <input type="text" class="form-control supplier-company-name"
+                                            id="supplier-company-name" value="" placeholder="请输入中标/成交供应商名称" required>
+                                    </div>
+                                    <div class="mini-input form-group">
+                                        <input type="text" class="form-control supplier-company-address" value=""
+                                            placeholder="请输入中标/成交供应商地址" required>
+                                    </div>
+                                    <div class="form-input-icon-box mini-input form-group">
+                                        <input type="text" class="form-control supplier-company-price" value=""
+                                            placeholder="请输入中标/成交供应商报价" required>
+                                        <span class="form-input-right-icon">元</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="review-members" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            评审委员会成员名单：</label>
+                        <div class="col-9">
+                            <textarea class="form-control" id="review-members" rows="3" placeholder="请输入评审委员会成员信息"
+                                required></textarea>
+                            <div class="invalid-feedback">
+                                评审委员会成员信息不能为空
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="review-members" class="col-3 col-form-label">备注：</label>
+                        <div class="col-9">
+                            <textarea class="form-control" id="review-members" placeholder="请输入备注信息"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters">
+                        <label for="project-enclosure" class="col-3 col-form-label"><span class="text-danger">*</span>
+                            附件：</label>
+                        <div class="col-9">
+                            <div class="dropzone" id="project-enclosure"></div>
+                            <p class="file-type-refer">格式可以是pdf、word、excel文档</p>
+                        </div>
+                    </div>
+                    <!-- 供应商/评审及其他信息 end -->
+
+                    <div class="row no-gutters">
+                        <div class="col-9 offset-3">
+                            <button type="submit" class="submit-btn btn btn-primary">提交审核</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal -->
+
+    <div class="project-confirm-modal flex-column d-none">
+        <div class="project-modal-title">操作提示</div>
+        <div class="project-modal-body">
+            <div class="project-modal-content text-center">
+                确定已正确填写相关信息，<br>提交项目审计？
+            </div>
+        </div>
+        <div class="project-modal-footer d-flex">
+            <span class="close-modal d-inline-block text-center" onClick="closeModal('.project-confirm-modal')">取消</span>
+            <span class="ensure-modal-btn d-inline-block text-center" onClick="ensureOper('.project-confirm-modal')">确认</span>
+        </div>
+    </div>
+    <!-- modal -->
+    <footer class="app-footer">
+        <div class="app-footer-body bg-primary">
+            <div class="bigdata-container">
+                <div class="row">
+                    <div class="col-7">
+                      <div class="footer-logo-box"><img src="./../assets/imgs/logo01.png" alt="成都审计服务网"></div>
+                      <div class="footer-nav-list">
+                          <a href="/" class="text-decoration-none">首页</a><span>|</span>
+                          <a href="/" class="text-decoration-none">信息价</a><span>|</span>
+                          <a href="/" class="text-decoration-none">市场价</a><span>|</span>
+                          <a href="/" class="text-decoration-none">行业资讯</a><span>|</span>
+                          <a href="/" class="text-decoration-none">历史采购</a><span>|</span>
+                          <a href="/" class="text-decoration-none">个人中心</a>
+                      </div>
+                    </div>
+                    <div class="col-5 clearfix">
+                      <div class="float-left footer-qr-code-box"><img src="./../assets/imgs/erweima.png" alt="成都天投"></div>
+                      <div class="float-left footer-link">
+                          <div class="footer-link-emai d-flex align-items-center">
+                              <img src="./../assets/imgs/youbain.png" alt="邮编">
+                              <span>邮编：610042</span>
+                          </div>
+                          <div class="footer-link-emai d-flex align-items-center">
+                            <img src="./../assets/imgs/dianhua.png" alt="电话">
+                            <span>028-62037262</span>
+                        </div>
+                        <div class="footer-link-emai d-flex align-items-center">
+                            <img src="./../assets/imgs/dizhi.png" alt="地址">
+                            <span>地址：成都科学城天府新经济产业园B区1-3号楼</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="footer-info text-center">
+            <p>成都天府新区投资集团有限公司  版权所有  Copyright © 2019 All Rights Reserved. ICP  备案序号：输ICP备14008233号-X  站长统计</p>
+            <div class="website-record d-flex justify-content-center align-items-center">
+                <span class="">川公网安备案  5101900200XXXX号</span>
+                <div class="website-record-img-box "><img src="./../assets/imgs/jiguan.png" alt="党政机关"></div>
+                <div class="website-record-img-box "><img src="./../assets/imgs/gongan.png" alt="公安"></div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./../assets/plugins/jquery/jquery.min.js"></script>
+<script src="./../assets/plugins/bootstrap-select/select.js"></script>
+<script src="./../assets/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="./../assets/plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<!-- <script src="./../assets/plugins/confirm/confirm.js"></script> -->
+<script src="./../assets/plugins/dropzone/dropzone.min.js"></script>
+<script src="./../assets/js/app.js"></script>
+
+<script>
+    // 使用select 美化插件
+    $('.selectpicker').selectpicker();
+    $('.selectpicker').selectpicker('render');
+    // 日期插件
+    $('#projectDate').datetimepicker({
+        format: 'yyyy-mm-dd',
+        minView: "month",
+        autoclose: true,
+        language: 'zh-CN'
+    });
+    // 文件上传
+
+    Dropzone.autoDiscover = false;
+    var dropz = new Dropzone('div.dropzone', {
+        url: '../../xxx',
+        autoProcessQueue: false,// 如果为false，文件将被添加到队列中，但不会自动处理队列。
+        uploadMultiple: true, // 是否在一个请求中发送多个文件。
+        parallelUploads: 3, // 并行处理多少个文件上传
+        maxFiles: 3, // 用于限制此Dropzone将处理的最大文件数
+        maxFilesize: 2,
+        acceptedFiles: ".jpg,.gif,.png, application/pdf, .doc,.docx, excel",
+        dictDefaultMessage: "拖拉图片文件到这里或者点击",
+        dictFallbackMessage: "你的浏览器不支持拖拉文件来上传",
+        dictMaxFilesExceeded: "文件数量过多",
+        dictInvalidFileType: "不允许被上传的文件类型",
+        // dictFileTooBig: "可添加的最大文件大小为{{maxFilesize}}Mb，当前文件大小为{{filesize}}Mb ",
+        init: function () { // dropzone初始化时调用您可以在此处添加事件侦听器
+            var myDropzone = this;
+            this.on("addedfile", function (file) {
+                console.log('addfile: ', file);
+                var removeButton = Dropzone.createElement("<p class='text-center pt-sm'><a class='text-danger'>删除</a></p>");
+                removeButton.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    myDropzone.removeFile(file);
+                });
+                file.previewElement.appendChild(removeButton);
+            });
+        },
+        sendingmultiple: function (file, xhr, formData) {// 在每个文件发送之前调用。获取xhr对象和formData对象作为第二和第三个参数，可以修改它们（例如添加CSRF令牌）或添加其他数据。
+            console.log(file, xhr, formData);
+            $.each(submitParams, function (key, value) {
+                formData.set(key, value);
+            });
+        },
+        successmultiple: function (file, response) {// 该文件已成功上传。获取服务器响应作为第二个参数。
+            console.log('success upload file');
+        },
+        completemultiple: function (file, data) {
+            console.log('complete: ', file, data);
+        },
+    });
+    // 文件上传
+
+    window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+                console.log(form);
+                $('.project-confirm-modal').removeClass('d-none').addClass('d-flex');
+                $('.submit-btn').attr('disabled', true);
+                // 确认提示框
+                // ensureReferModal({
+                //     title: '操作提示',
+                //     message: '确定已正确填写相关信息，<br>提交项目审计？',
+                //     okText: '确定',
+                //     cancelText: '取消',
+                //     url: "'./login.html'"
+                // });
+                // if (form.checkValidity()) {
+                //     // let message = '确定已正确填写相关信息，<br>提交项目审计？';
+                //     // window.wxc.xcConfirm(message, window.wxc.xcConfirm.typeEnum.confirm);
+                // }
+            }, false);
+        });
+    }, false);
+    function closeModal(el) {
+        $(el).removeClass('d-flex').addClass('d-none');
+                $('.submit-btn').attr('disabled', false);
+    }
+    function ensureOper(el) {
+        console.log('确认');
+        $(el).removeClass('d-flex').addClass('d-none');
+        $('.submit-btn').attr('disabled', false);
+    }
+
+    function uploadInfo() {
+        console.log('提交审计， 不知是上传文件还是干啥');
+    }
+
+</script>
+
+</html>

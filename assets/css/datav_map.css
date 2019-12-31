@@ -1,0 +1,745 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: url('./../imgs/datav/datav_body_bg.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.datav_map {
+    width: 100%;
+    height: 100%;
+    /* background: rgba(21, 19, 56, 0.8); */
+    position: relative;
+}
+
+.datav_header {
+    width: 100%;
+    height: 1.44rem;
+    color: #00F0FF;
+    overflow: hidden;
+    background: url('./../imgs/datav/sjyjjkzx.png') no-repeat center top;
+    background-size: contain;
+}
+
+.datav_header_title_cn {
+    width: 4.16rem;
+    height: 0.43rem;
+    font-size: 0.42rem;
+    line-height: 0.42rem;
+    margin: 0.3rem auto;
+    text-align: justify;
+}
+
+.datav_header_title i {
+    display: inline-block;
+    width: 100%;
+}
+
+.datav_header_title_en {
+    width: 6.6rem;
+    height: 0.16rem;
+    font-size: 0.16rem;
+    line-height: 0.16rem;
+    letter-spacing: 0.09rem;
+    text-align: justify;
+    text-indent: 0.26rem;
+    margin: 0.3rem auto 0;
+}
+
+/* 标题下的分类 如： 审计地图/ 审计分类 。。。*/
+.datav_body {
+    padding: 0 1rem 1rem;
+}
+
+.datav_category_title {
+    width: 100%;
+    height: 1.17rem;
+    overflow: hidden;
+    margin-top: -0.57rem;
+}
+
+.datav_category_title>div {
+    width: 5.21rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+.datav_category_name_box {
+    width: 0.99rem;
+    height: 1.02rem;
+    padding: 0.13rem 0.12rem;
+    font-size: 0.2rem;
+    color: #0C3E8F;
+    text-align: center;
+    background: url('./../imgs/datav/yuan_bg.png') no-repeat center center;
+}
+
+.datav_category_name_active {
+    background: url('./../imgs/datav/yuan_sf_bg.png'), url('./../imgs/datav/yuan_bg.png') no-repeat center center;
+}
+
+.datav_category_name_box>div {
+    width: 100%;
+    height: 100%;
+}
+
+.datav_category_name_box.datav_category_name_active::after {
+    content: ' ';
+    display: block;
+    width: 0.43rem;
+    height: 0.06rem;
+    overflow: hidden;
+    background-color: #5CD7FF;
+    margin: 0.24rem auto;
+}
+
+/* 图表内容 */
+.datav_content_box {
+    width: 100%;
+    height: 7.8rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.datav_content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.datav_content_active {
+    display: block;
+    opacity: 1;
+}
+
+.datav_content>div {
+    width: 100%;
+}
+
+.datav_first_floor {
+    height: 5.85rem;
+}
+
+.datav_floor_side {
+    width: 5.21rem;
+}
+
+.datav_floor_center {
+    flex-grow: 1;
+}
+
+.datav_center_stats {
+    margin: 0 0.26rem;
+}
+
+.davav_second_map_box {
+    width: 100%;
+    height: 100%;
+}
+
+.datav_first_charts {
+    background: url('./../imgs/datav/tuoyuan_bg1.png') no-repeat left top;
+}
+
+.datav_second_charts {
+    width: 6.67rem;
+    height: 6.79rem !important;
+    margin-top: -0.47rem;
+    padding: 0.47rem 0.26rem;
+    background: url("./../imgs/datav/yuanxing_sandian_bg.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+.datav_second_map_box {
+    width: 6.24rem;
+    height: 5.85rem;
+    background: url('./../imgs/datav/zhengfangxing_biankuang_bg.png') no-repeat left top;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.datav_third_charts {
+    height: 5.96rem !important;
+    background: url('./../imgs/datav/tuoyuan_bg2.png') no-repeat left top;
+}
+
+.datav_echarts_box {
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+/* 第一个 echarts 图表 */
+.datav_first_charts {
+    padding: 0.14rem 0.18rem;
+}
+
+.datav_first_title {
+    width: 1.62rem;
+    height: 0.64rem;
+    font-size: 0.24rem;
+    color: #00F0FF;
+    line-height: 0.64rem;
+    letter-spacing: 0.02rem;
+    overflow: hidden;
+    background: url('./../imgs/datav/title_bg1.png') no-repeat left top;
+    background-size: 100% 100%;
+}
+
+.datav_first_subTitle {
+    width: 4.1rem;
+    color: #00F0FF;
+    margin: 0.26rem 0;
+}
+
+.first_subbTitle_name {
+    font-size: 0.26rem;
+}
+
+.datav_first_subtitle_icon {
+    width: 0.28rem;
+    height: 0.27rem;
+    margin-right: 0.08rem;
+    overflow: hidden;
+    background: url("./../imgs/datav/yingyee.png") no-repeat left top;
+    background-size: contain;
+}
+
+.datav_first_charts_total {
+    font-size: 0.18rem;
+    padding-top: 0.1rem;
+}
+
+.datav_first_charts_content {
+    width: 4.1rem;
+    height: 4.1rem;
+    overflow: hidden;
+}
+
+.datav_first_charts_body {
+    width: 100%;
+    height: 100%;
+}
+
+/* 第二个 echarts 图表 */
+.datav_second_map_china,
+.datav_second_map_china>div {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden;
+}
+
+.datav_second_map_china canvas {
+    width: 6.24rem !important;
+    height: 5.85rem !important;
+}
+
+.datav_second_map_title {
+    width: 3.53rem;
+    height: 0.46rem;
+    overflow: hidden;
+    color: #00F0FF;
+    font-size: 0.24rem;
+    line-height: 0.46rem;
+    background: url('./../imgs/datav/map_title_bg.png') no-repeat center center;
+    background-size: 100% 100%;
+    margin-left: -1.76rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0.36rem;
+}
+
+/* 第三个echarts 图表 */
+.datav_third_echart_title_box {
+    margin-top: 0.14rem;
+    padding-right: 0.24rem;
+}
+
+.datav_third_echart_title {
+    width: 1.97rem;
+    height: 0.64rem;
+    font-size: 0.24rem;
+    line-height: 0.64rem;
+    letter-spacing: 0.02rem;
+    color: #00F0FF;
+    overflow: hidden;
+    background: url('./../imgs/datav/title_bg2.png') no-repeat left top;
+    background-size: 100% 100%;
+}
+
+.datav_third_charts_content {
+    width: 4rem;
+    height: calc(100% - 0.8rem);
+    overflow: hidden;
+    padding-right: 0.24rem;
+}
+
+.datav_third_charts_list {
+    width: 100%;
+    height: 28%;
+    margin-top: 0.1rem;
+    margin-right: 0.24rem;
+    font-size: 16px;
+    color: #00F0FF;
+}
+
+.datav_third_charts_center {
+    margin: 3% 0;
+}
+
+.datav_third_charts_list>div {
+    height: 100%;
+}
+
+.datav_third_chart_pie {
+    width: 40%;
+}
+
+.datav_third_chart_description {
+    width: 60%;
+    color: #00F0FF;
+    font-size: 0.18rem;
+    line-height: 0.36rem;
+    background: url("./../imgs/datav/bg_border_rotate_right.png") no-repeat left bottom;
+    background-size: contain;
+}
+
+.datav_third_chart_description.float-right {
+    padding-left: 0.6rem;
+    background: url("./../imgs/datav/bg_border_totate_left.png") no-repeat left bottom;
+    background-size: contain;
+}
+
+/* 第二层数据 */
+.datav_second_floor {
+    height: 1.68rem;
+    margin-top: 0.24rem;
+}
+
+.datav_data_stats {
+    height: 100%;
+    border: 2px solid #5CD7FF;
+    border-radius: 0.08rem;
+    -webkit-border-radius: 0.08rem;
+    -moz-border-radius: 0.08rem;
+    -ms-border-radius: 0.08rem;
+    -o-border-radius: 0.08rem;
+}
+
+.datav_stats_box {
+    color: #5CD7FF;
+}
+
+.datav_stats_total {
+    font-size: 0.3rem;
+    color: #00F0FF;
+    letter-spacing: 0.02rem;
+    width: 1.16rem;
+    height: 1.16rem;
+    overflow: hidden;
+    background: url('./../imgs/datav/tuoyuan_zuhe_bg.png') no-repeat left top;
+    background-size: cover;
+}
+
+.datav_status_name {
+    color: #00F0FF;
+    font-size: 0.16rem;
+    line-height: 0.3rem;
+}
+
+/* 审计画像模块样式 */
+.datav_image {
+    width: 100%;
+    height: 100%;
+}
+
+/* 左中右三列布局 */
+.datav_image_left,
+.datav_image_right {
+    width: 5.21rem;
+}
+
+.datav_image_center {
+    width: 6.24rem;
+    margin: 0 0.27rem;
+}
+
+/* 左1 */
+.datav_image_left_top {
+    width: 5.21rem;
+    height: 2.07rem;
+    margin-bottom: 0.24rem;
+}
+
+.datav_image_zfx_border {
+    overflow: hidden;
+    padding: 0.26rem;
+    background: url('./../imgs/datav/image_left1.png') no-repeat left top;
+    background-size: 100% 100%;
+}
+
+.datav_image_left_top_title {
+    height: 0.26rem;
+    font-size: 0.24rem;
+    line-height: 0.26rem;
+    color: #00F0FF;
+    overflow: hidden;
+    margin-bottom: 0.03rem;
+}
+
+.datav_image_left_top_content {
+    padding-top: 0.21rem;
+}
+
+.datav_image_left_top_content>div {
+    width: 100%;
+    font-size: 0.16rem;
+    overflow: hidden;
+}
+
+.datav_image_left_top_content1 {
+    height: 0.37rem;
+    margin-bottom: 0.21rem;
+}
+
+.datav_image_box1_title {
+    width: 1.17rem;
+    height: 0.37rem;
+    line-height: 0.37rem;
+    color: #044475;
+    overflow: hidden;
+    background: url('./../imgs/datav/image_box1_title_bg.png') no-repeat left top;
+    background-size: 100% 100%;
+}
+
+.datav_image_bo1_value {
+    text-indent: 0.37rem;
+    font-size: 0.18rem;
+    line-height: 0.37rem;
+    min-width: 1.07rem !important;
+    max-width: 3.23rem !important;
+    background: url('./../imgs/datav/image_box1_value_bg.png') no-repeat left top;
+    background-size: 100% 100%;
+}
+
+.datav_image_left_top_content2 {
+    height: 0.36rem;
+}
+
+/* 左 二 */
+.datav_image_left_center {
+    width: 5.22rem;
+    height: 1.99rem;
+    margin-bottom: 0.28rem;
+    overflow: hidden;
+}
+
+.datav_image_left_center_box {
+    padding-top: 0.2rem;
+    height: 1.16rem;
+    overflow: hidden;
+}
+
+.datav_image_left_center_content_box>div {
+    width: 50%;
+    margin-bottom: 0.2rem;
+}
+
+.datav_image_left_center_list {
+    font-size: 0.16rem;
+    line-height: 0.32rem;
+    color: #00F0FF;
+    padding-right: 0.1rem;
+}
+
+.datav_image_left_center_list>div span.list-icon {
+    width: 0.06rem;
+    height: 0.06rem;
+    overflow: hidden;
+    margin-right: 0.1rem;
+    background-color: #5CD7FF;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.datav_image_left_center_list>div span.text-truncate {
+    flex-grow: 1;
+}
+
+/* 左 三 */
+.datav_image_left_bottom {
+    height: 3.2rem;
+    font-size: 0.16rem;
+    color: #00F0FF;
+    overflow: hidden;
+}
+
+.datav_image_left_bottom ul li {
+    list-style: none;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    overflow: hidden;
+}
+
+.datav_image_left_bottom ul li:nth-child(odd) {
+    background: rgba(92, 215, 255, 0.04);
+    border-radius: 0.08rem;
+    -webkit-border-radius: 0.08rem;
+    -moz-border-radius: 0.08rem;
+    -ms-border-radius: 0.08rem;
+    -o-border-radius: 0.08rem;
+}
+
+.datav_image_left_bottom ul li.datav_image_left_bottom_list_title {
+    width: 100%;
+    opacity: 1;
+    background-color: #233A60 !important;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.datav_image_left_bottom ul {
+    padding: 0;
+    margin: 0;
+}
+
+.datav_image_left_bottom_list_index {
+    width: 0.85rem;
+}
+
+.datav_image_left_bottom_list_companyname {
+    width: 2.9rem;
+}
+
+.datav_image_left_bottom_list_money {
+    width: 1.4rem;
+}
+
+/* 中 一 */
+.datav_image_center_top {
+    width: 6.24rem;
+    height: 5.6rem;
+    padding: 0.35rem 0.5rem 0.2rem;
+    overflow: hidden;
+    background: url("./../imgs/datav/image_center_border.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+.datav_image_center_top_content {
+    width: 100%;
+    height: 1.98rem;
+    color: #00F0FF;
+    letter-spacing: 0.03rem;
+    overflow: hidden;
+}
+
+.datav_image_center_top_content .datav_image_center_top_content_value {
+    background: url("./../imgs/datav/tuoyuan_zuhe_bg.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+
+.datav_image_center_top_content_side .datav_image_center_top_content_value {
+    width: 1.16rem;
+    height: 1.16rem;
+    font-size: 0.3rem;
+    line-height: 1.16rem;
+    overflow: hidden;
+}
+
+.datav_image_center_top_content_center .datav_image_center_top_content_value {
+    width: 1.59rem;
+    height: 1.59rem;
+    overflow: hidden;
+    font-size: 0.46rem;
+    line-height: 1.59rem;
+    overflow: hidden;
+}
+
+.datav_image_center_top_content_name {
+    font-size: 0.16rem;
+    line-height: 0.36rem;
+}
+
+.datav_image_center_top_chart_box {
+    width: 100%;
+    height: 2.75rem;
+    margin-top: 0.1rem;
+    overflow: hidden;
+}
+
+.datav_image_center_top_chart {
+    width: 5.24rem;
+    height: 2.75rem;
+}
+
+/* 中 二 */
+.datav_image_center_bottom {
+    width: 100%;
+    height: 2.08rem;
+    padding: 0.2rem;
+    margin-top: 0.12rem;
+    border: 0.02rem solid #5CD7FF;
+    border-radius: 0.08rem;
+    -webkit-border-radius: 0.08rem;
+    -moz-border-radius: 0.08rem;
+    -ms-border-radius: 0.08rem;
+    -o-border-radius: 0.08rem;
+}
+
+.datav_image_center_bottom_chart_box,
+.datav_image_center_bottom_chart,
+.datav_image_right_top_chart_box,
+.datav_image_right_top_chart {
+    width: 100%;
+    height: 100%;
+}
+
+/* 右 一 */
+.datav_image_right_top,
+.datav_image_right_center {
+    width: 100%;
+    overflow: hidden;
+    padding: 0.2rem;
+    margin-bottom: 0.26rem;
+    border: 0.02rem solid #5CD7FF;
+    border-radius: 0.08rem;
+    -webkit-border-radius: 0.08rem;
+    -moz-border-radius: 0.08rem;
+    -ms-border-radius: 0.08rem;
+    -o-border-radius: 0.08rem;
+}
+
+.datav_image_right_top {
+    height: 2.08rem;
+}
+
+.datav_image_right_center {
+    height: 1.98rem;
+}
+
+/* 审计预警 */
+.datav_warning {
+    width: 100%;
+    height: 100%;
+}
+
+.datav_warning_left,
+.datav_warning_right {
+    width: 5.21rem;
+}
+
+.datav_warning_center {
+    width: 6.24rem;
+    margin: 0 0.27rem;
+}
+
+.datav_warning_left_top,
+.datav_warning_right_top {
+    width: 100%;
+    height: 2.08rem;
+    padding: 0.2rem;
+    border: 0.02rem solid #5CD7FF;
+    border-radius: 0.08rem;
+    -webkit-border-radius: 0.08rem;
+    -moz-border-radius: 0.08rem;
+    -ms-border-radius: 0.08rem;
+    -o-border-radius: 0.08rem;
+}
+
+.datav_warning_left_top_chart_box,
+.datav_warning_left_top_chart,
+.datav_warning_right_top_chart_box,
+.datav_warning_right_top_chart {
+    width: 100%;
+    height: 100%;
+}
+
+.datav_warning_left_center,
+.datav_warning_right_center {
+    height: 2.24rem;
+    margin-top: 0.24rem;
+    margin-bottom: 0.24rem;
+}
+
+/* 中  center warning */
+.datav_warning_center {
+    width: 6.24rem;
+}
+.datav_warning_center_top {
+    width: 100%;
+    height: 5.5rem;
+    padding: 0.35rem 0.5rem 0.2rem;
+    overflow: hidden;
+    background: url("./../imgs/datav/image_center_border.png") no-repeat left top;
+    background-size: 100% 100%;
+}
+.datav_warning_center_top_title_box {
+    height: 0.25rem;
+    overflow: hidden;
+    color: #00F0FF;
+    margin-bottom: 0.37rem;
+}
+.datav_warning_center_top_title {
+    line-height: 0.25rem;
+    font-size: 0.24rem;
+}
+.datav_warning_center_top_subtitle {
+    line-height: 0.25rem;
+    font-size: 0.16rem;
+}
+.datav_warning_center_top_content {
+    height: 4.3rem;
+    overflow: hidden;
+}
+.datav_warning_center_top_content ul li {
+    height: 0.36rem;
+    line-height: 0.36rem;
+}
+
+/* 左 1 bottom  右1 bottom */
+.datav_warning_left_bottom,
+.datav_warning_right_bottom {
+    width: 100%;
+    height: 3rem;
+    overflow: hidden;
+}
+.datav_warning_left_bottom_chart_box,
+.datav_warning_left_bottom_chart,
+.datav_warning_right_bottom_chart_box,
+.datav_warning_right_bottom_chart {
+    width: 100%;
+    height: 100%;
+}
+
+/* 中  bottom */
+.datav_warning_center_bottom {
+    height: 2.08rem;
+    margin-top: 0.22rem;
+}
+.datav_warning_center_bottom .datav_floor_side {
+    width: 100%;
+}
+/* datav footer */
+.datav_footer {
+    width: 100%;
+    font-size: 0.14rem;
+    color: #00F0FF;
+    letter-spacing: 0.01rem;
+    position: absolute;
+    left: 0;
+    bottom: 0.25rem;
+}

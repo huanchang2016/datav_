@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大数据-审计地图</title>
+    <link rel="stylesheet" href="./../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../assets/css/datav_map.css">
+</head>
+
+<body>
+    <div class="datav_map">
+        <div class="datav_header">
+            <div class="datav_header_title datav_header_title_cn text-justify">审计大数据监管中心<i></i></div>
+            <div class="datav_header_title datav_header_title_en">AUDIT BIG DATA SUPERVISION CENTER <i></i></div>
+        </div>
+        <div class="datav_body">
+            <!-- 大数据分类标题 -->
+            <div class="datav_category_title clearfix">
+                <div class="float-left d-flex justify-content-around">
+                    <div datav-index="0" class="datav_category_name_box font-weight-bold">
+                        <div class=" d-flex justify-content-center align-items-center">审计<br>地图</div>
+                    </div>
+                    <div datav-index="1" class="datav_category_name_box font-weight-bold">
+                        <div class=" d-flex justify-content-center align-items-center">审计<br>画像</div>
+                    </div>
+                </div>
+                <div class="float-right d-flex justify-content-around">
+                    <div datav-index="2" class="datav_category_name_box font-weight-bold datav_category_name_active">
+                        <div class=" d-flex justify-content-center align-items-center">审计<br>预警</div>
+                    </div>
+                    <div datav-index="3" class="datav_category_name_box font-weight-bold">
+                        <div class=" d-flex justify-content-center align-items-center">审计<br>驾驶舱</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 大数据内容模块 -->
+            <div class="datav_content_box">
+                <!-- 审计地图 -->
+                <div class="datav_content datav_content_active">
+                    <div class="datav_first_floor d-flex">
+                        <div class=" datav_floor_side datav_echarts_box datav_first_charts">
+                            <div class="datav_first_title font-weight-bold text-center">审计台账</div>
+                            <div class="datav_first_subTitle clearfix">
+                                <div class="float-left first_subbTitle_name d-flex align-items-center">
+                                    <span class="datav_first_subtitle_icon d-inline-block"></span>
+                                    <span>年度审计</span>
+                                </div>
+                                <div class="float-right datav_first_charts_total">
+                                    <span>审计总数：</span>
+                                    <span>26 个</span>
+                                </div>
+                            </div>
+                            <div class="datav_first_charts_content">
+                                <div id="datav_first_charts_body" class="datav_first_charts_body"></div>
+                            </div>
+                        </div>
+                        <div class="datav_floor_center datav_echarts_box datav_second_charts">
+                            <div class="datav_second_map_box">
+                                <div class="datav_second_map_china" id="datav_map_china"></div>
+                                <div class="datav_second_map_title text-center">中央地图</div>
+                            </div>
+                        </div>
+                        <div class="datav_floor_side datav_echarts_box datav_third_charts">
+                            <div class="datav_third_echart_title_box clearfix">
+                                <div class="datav_third_echart_title text-center font-weight-bold float-right">审计预警总数
+                                </div>
+                            </div>
+                            <div class="datav_third_charts_content float-right">
+                                <div class="datav_third_charts_list clearfix">
+                                    <div
+                                        class="datav_third_chart_description float-left d-flex flex-column justify-content-center">
+                                        <div class="font-weight-bold">审计单位数：346 个</div>
+                                        <div class="font-weight-bold">预警单位数：568 个</div>
+                                        <div class="font-weight-bold">占比： 40%</div>
+                                        <!-- <div class="datav_pie_echarts_line"></div> -->
+                                    </div>
+                                    <div id="datav_third_echarts_list1" class="datav_third_chart_pie float-right"></div>
+                                </div>
+                                <div class="datav_third_charts_list clearfix datav_third_charts_center">
+                                    <div id="datav_third_echarts_list2" class="datav_third_chart_pie float-left">2</div>
+                                    <div
+                                        class="datav_third_chart_description float-right d-flex flex-column justify-content-center">
+                                        <div class="font-weight-bold">审计单位数：346 个</div>
+                                        <div class="font-weight-bold">预警单位数：568 个</div>
+                                        <div class="font-weight-bold">占比： 40%</div>
+                                        <!-- <div class="datav_pie_echarts_line"></div> -->
+                                    </div>
+                                </div>
+                                <div class="datav_third_charts_list clearfix">
+                                    <div
+                                        class="datav_third_chart_description float-left d-flex flex-column justify-content-center">
+                                        <div class="font-weight-bold">审计单位数：346 个</div>
+                                        <div class="font-weight-bold">预警单位数：568 个</div>
+                                        <div class="font-weight-bold">占比： 40%</div>
+                                        <!-- <div class="datav_pie_echarts_line"></div> -->
+                                    </div>
+                                    <div id="datav_third_echarts_list3" class="datav_third_chart_pie float-right">3
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex datav_second_floor">
+                        <div class="datav_floor_side datav_data_stats d-flex align-items-center justify-content-around">
+                            <div
+                                class="datav_stats_box font-weight-bold d-flex flex-column justify-content-center align-items-center">
+                                <div class="datav_stats_total d-flex align-items-center justify-content-center">10</div>
+                                <div class="datav_status_name">审计年度总数（个）</div>
+                            </div>
+                            <div
+                                class="datav_stats_box font-weight-bold d-flex flex-column justify-content-center align-items-center">
+                                <div class="datav_stats_total d-flex align-items-center justify-content-center">236
+                                </div>
+                                <div class="datav_status_name">审计年度总额（万）</div>
+                            </div>
+                        </div>
+                        <div
+                            class="datav_floor_center datav_center_stats datav_data_stats d-flex align-items-center justify-content-around">
+                            <div
+                                class="datav_stats_box font-weight-bold d-flex flex-column justify-content-center align-items-center">
+                                <div class="datav_stats_total d-flex align-items-center justify-content-center">236
+                                </div>
+                                <div class="datav_status_name">累计审计总数（个）</div>
+                            </div>
+                            <div
+                                class="datav_stats_box font-weight-bold d-flex flex-column justify-content-center align-items-center">
+                                <div class="datav_stats_total d-flex align-items-center justify-content-center">236
+                                </div>
+                                <div class="datav_status_name">累计审计总额（万）</div>
+                            </div>
+                        </div>
+                        <div class="datav_floor_side datav_data_stats d-flex align-items-center justify-content-around">
+                            <div
+                                class="datav_stats_box font-weight-bold d-flex flex-column justify-content-center align-items-center">
+                                <div class="datav_stats_total d-flex align-items-center justify-content-center">236
+                                </div>
+                                <div class="datav_status_name">本月审计总数（个）</div>
+                            </div>
+                            <div
+                                class="datav_stats_box font-weight-bold d-flex flex-column justify-content-center align-items-center">
+                                <div class="datav_stats_total d-flex align-items-center justify-content-center">236
+                                </div>
+                                <div class="datav_status_name">本月审计总额（万）</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 审计分布 -->
+                <div class="datav_content">
+                    <div class="clearfix datav_image">
+                        <div class="datav_image_left float-left">
+                            <div class="datav_image_left_top datav_image_zfx_border">
+                                <div class="datav_image_left_top_title font-weight-bold">评价统计</div>
+                                <div class="datav_image_left_top_content">
+                                    <div class="datav_image_left_top_content1 clearfix">
+                                        <div class="datav_image_box1_title text-center float-left">满意产品数</div>
+                                        <div class="datav_image_bo1_value float-left font-weight-bold" data-value="10">10</div>
+                                    </div>
+                                    <div class="datav_image_left_top_content2 clearfix">
+                                        <div class="datav_image_box1_title text-center float-left">优质商家数</div>
+                                        <div class="datav_image_bo1_value float-left font-weight-bold" data-value="99">99</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="datav_image_left_center datav_image_zfx_border">
+                                <div class="datav_image_left_center_content_box clearfix">
+                                    <div class="datav_image_left_center_content float-left">
+                                        <div class="datav_image_left_top_title font-weight-bold">优质供应商</div>
+                                        <div class="datav_image_left_center_box">
+                                            <!-- 这个位置，设计上数据只有3条，建议只显示3条，如有多条，需要重新修改样式 -->
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="datav_image_left_center_content float-left">
+                                        <div class="datav_image_left_top_title font-weight-bold">劣质供应商</div>
+                                        <div class="datav_image_left_center_box">
+                                            <!-- 这个位置，设计上数据只有3条，建议只显示3条，如有多条，需要重新修改样式 -->
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="datav_image_left_bottom">
+                                <ul>
+                                    <li class="d-flex align-items-center datav_image_left_bottom_list_title">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">序号</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">企业名称</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">中标金额（万）</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">01</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">02</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">03</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">04</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">05</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">06</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">07</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">08</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">08</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">08</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">08</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="datav_image_center float-left">
+                            <div class="datav_image_center_top">
+                                <div class="datav_image_center_top_content d-flex justify-content-between align-items-center">
+                                    <div class="datav_image_center_top_content_side">
+                                        <div class="datav_image_center_top_content_value font-weight-bold text-center">126</div>
+                                        <div class="datav_image_center_top_content_name text-center">政府单位数</div>
+                                    </div>
+                                    <div class="datav_image_center_top_content_center">
+                                        <div class="datav_image_center_top_content_value font-weight-bold text-center">26</div>
+                                        <div class="datav_image_center_top_content_name text-center">国有企业数</div>
+                                    </div>
+                                    <div class="datav_image_center_top_content_side">
+                                        <div class="datav_image_center_top_content_value font-weight-bold text-center">126</div>
+                                        <div class="datav_image_center_top_content_name text-center">竞标企业数</div>
+                                    </div>
+                                </div>
+                                <div class="datav_image_center_top_chart_box">
+                                    <div id="datav_image_center_top_chart" class="datav_image_center_top_chart"></div>
+                                </div>
+                            </div>
+                            <div class="datav_image_center_bottom">
+                                <div class="datav_image_center_bottom_chart_box">
+                                    <div id="datav_image_center_bottom_chart" class="datav_image_center_bottom_chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="datav_image_right float-right">
+                            <div class="datav_image_right_top">
+                                <div class="datav_image_right_top_chart_box">
+                                    <div id="datav_image_right_top_chart" class="datav_image_center_bottom_chart"></div>
+                                </div>
+                            </div>
+                            <div class="datav_image_right_center">
+                                <div class="datav_image_left_center_content_box clearfix">
+                                    <div class="datav_image_left_center_content float-left">
+                                        <div class="datav_image_left_top_title font-weight-bold">优质产品</div>
+                                        <div class="datav_image_left_center_box">
+                                            <!-- 这个位置，设计上数据只有3条，建议只显示3条，如有多条，需要重新修改样式 -->
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="datav_image_left_center_content float-left">
+                                        <div class="datav_image_left_top_title font-weight-bold">劣质产品</div>
+                                        <div class="datav_image_left_center_box">
+                                            <!-- 这个位置，设计上数据只有3条，建议只显示3条，如有多条，需要重新修改样式 -->
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                            <div class="datav_image_left_center_list">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="d-inline-block list-icon "></span>
+                                                    <span class="text-truncate">成都建材有限公司成都建材有限公司成都建材有限公司</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="datav_image_right_bottom datav_image_left_bottom">
+                                <ul>
+                                    <li class="d-flex align-items-center datav_image_left_bottom_list_title">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">序号</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">企业名称</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">中标次数（次）</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">01</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">02</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">03</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">04</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">05</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">06</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">07</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">08</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">08</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">08</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">08</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 审计预警 -->
+                <div class="datav_content">
+                    <div class="datav_warning clearfix">
+                        <div class="datav_warning_left float-left">
+                            <div class="datav_warning_left_top">
+                                <div class="datav_warning_left_top_chart_box">
+                                    <div id="datav_warning_left_top_chart" class="datav_warning_left_top_chart"></div>
+                                </div>
+                            </div>
+                            <div class="datav_warning_left_center datav_image_left_bottom">
+                                <ul>
+                                    <li class="d-flex align-items-center datav_image_left_bottom_list_title">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">序号</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">预警单位</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">预警金额（万）</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">01</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">02</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">03</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">04</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">05</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">06</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="datav_warning_left_bottom">
+                                <div class="datav_warning_left_bottom_chart_box">
+                                    <div id="datav_warning_left_bottom_chart" class="datav_warning_left_bottom_chart"></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="datav_warning_center float-left">
+                            <div class="datav_warning_center_top">
+                                <div class="datav_warning_center_top_title_box font-weight-bold clearfix">
+                                    <span class="datav_warning_center_top_title float-left">预警台账</span>
+                                    <span class="datav_warning_center_top_subtitle float-right">预警项目总数：126</span>
+                                </div>
+                                <div class="datav_warning_center_top_content datav_image_left_bottom">
+                                    <ul>
+                                        <li class="d-flex align-items-center datav_image_left_bottom_list_title">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">序号</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">项目名称</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">预警时间</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">01</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">02</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">03</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">04</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">05</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">06</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">01</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">02</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">03</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">04</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">05</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <div class="datav_image_left_bottom_list_index text-center font-weight-bold">06</div>
+                                            <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                            <div class="datav_image_left_bottom_list_money text-center font-weight-bold">2019-12-31</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="datav_warning_center_bottom">
+                                <div class="datav_floor_side datav_data_stats d-flex align-items-center justify-content-around">
+                                    <div
+                                        class="datav_stats_box font-weight-bold d-flex flex-column justify-content-center align-items-center">
+                                        <div class="datav_stats_total d-flex align-items-center justify-content-center">10</div>
+                                        <div class="datav_status_name">预警项目数（个）</div>
+                                    </div>
+                                    <div
+                                        class="datav_stats_box font-weight-bold d-flex flex-column justify-content-center align-items-center">
+                                        <div class="datav_stats_total d-flex align-items-center justify-content-center">236
+                                        </div>
+                                        <div class="datav_status_name">预警金额数（万）</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="datav_warning_right float-right">
+                            <div class="datav_warning_right_top">
+                                <div class="datav_warning_right_top_chart_box">
+                                    <div id="datav_warning_right_top_chart" class="datav_warning_right_top_chart"></div>
+                                </div>
+                            </div>
+                            <div class="datav_warning_right_center datav_image_left_bottom">
+                                <ul>
+                                    <li class="d-flex align-items-center datav_image_left_bottom_list_title">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">序号</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">预警单位</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">预警次数（次）</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">01</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">02</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">03</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">04</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">05</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="datav_image_left_bottom_list_index text-center font-weight-bold">06</div>
+                                        <div class="datav_image_left_bottom_list_companyname text-truncate font-weight-bold">成都建材有限公司成都建材有限公司成都建材有限公司成都建材有限公司</div>
+                                        <div class="datav_image_left_bottom_list_money text-center font-weight-bold">50</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="datav_warning_right_bottom">
+                                <div class="datav_warning_right_bottom_chart_box">
+                                    <div id="datav_warning_right_bottom_chart" class="datav_warning_right_bottom_chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 审计驾驶舱 -->
+                <div class="datav_content">4444</div>
+            </div>
+
+        </div>
+        <div class="datav_footer">
+            <div class="datav_footer_content text-center font-weight-bold">Copyright © 2018 tffwzl.com All Right Reserved 蜀ICP备18017553号-1</div>
+        </div>
+    </div>
+</body>
+<script src="./../assets/plugins/jquery/jquery.min.js"></script>
+<script src="./../assets/plugins/echarts/echarts.min.js"></script>
+<script src="./../assets/plugins/echarts/map/china.js"></script>
+<script src="./../assets/js/datav.js"></script>
+<script>
+    // 设置根字体
+    (function (doc, win) {
+        let fn = () => {
+            let docEl = doc.documentElement,
+                clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = 100 * (clientWidth / 1920) + 'px';
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener('resize', fn);
+        doc.addEventListener('DOMContentLoaded', fn);
+    })(document, window);
+
+    // 在页面初始化完成后，加载所有得图表数据
+    $(function () {
+
+        var startIndex = $('.datav_category_name_active').eq(0).attr('datav-index');
+        $(".datav_content_box .datav_content").removeClass('datav_content_active').eq(startIndex).addClass('datav_content_active');
+        if (startIndex == 0) {
+            initMapOfDatavPage();
+        }else if(startIndex == 1) { // 审计地图
+            initMapOfDatavImage();
+        }else if(startIndex == 2) { // 审计预警
+            initmapOfDatavWarning();
+        }
+        // 切换数据图表内容
+        $(".datav_category_name_box").on('click', function () {
+            $(".datav_category_name_box").removeClass('datav_category_name_active');
+            $(this).addClass('datav_category_name_active');
+            let index = $(this).attr('datav-index');
+            $(".datav_content_box .datav_content").removeClass('datav_content_active').eq(index).addClass('datav_content_active');
+            if (index == 0) {
+                initMapOfDatavPage();
+            }else if(index == 1) {
+                initMapOfDatavImage();
+            }else if(index == 2) {
+                initmapOfDatavWarning();
+            }
+        })
+    })
+</script>
+
+</html>
