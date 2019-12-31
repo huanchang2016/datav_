@@ -131,7 +131,7 @@
                     inside: false,
                     textStyle: {
                         color: '#fff',
-                        fontSize: 16
+                        fontSize: '0.16rem'
                     }
                 },
                 axisTick: {
@@ -152,7 +152,7 @@
                 axisLabel: {
                     textStyle: {
                         color: '#5CD7FF',
-                        fontSize: 16
+                        fontSize: '0.16rem'
                     }
                 },
                 splitLine: {
@@ -182,7 +182,7 @@
                                 position: 'top', //在上方显示
                                 textStyle: { //数值样式
                                     color: '#5CD7FF',
-                                    fontSize: 20,
+                                    fontSize: '0.2rem',
                                     fontWeight: 600
                                 }
                             },
@@ -329,7 +329,7 @@
                 label: {
                     normal: {
                         show: false,
-                        fontSize: 12,
+                        fontSize: '0.12rem',
                         color: '#0053FB'
                     },
                     emphasis: {
@@ -391,64 +391,6 @@
                     data: mydata
                 }
             ]
-            //配置属性
-            // series: [
-            //     {
-            //         name: '',
-            //         type: 'scatter',
-            //         coordinateSystem: 'map',
-            //         data: cityPosition,
-            //         // symbolSize: function (val) {
-            //         //     return val[2] / 10;
-            //         // },
-            //         label: {
-            //             normal: {
-            //                 formatter: '{b}',
-            //                 position: 'right',
-            //                 show: false
-            //             },
-            //             emphasis: {
-            //                 show: true
-            //             }
-            //         },
-            //         itemStyle: {
-            //             normal: {
-            //                 color: '#ddb926'
-            //             }
-            //         }
-            //     },
-            //     {
-            //     name: '数据',
-            //     type: 'map',
-            //     mapType: 'china',
-            //     // center: [103.9526,30.7617],
-
-            //     roam: false,
-            //     itemStyle: {
-            //         normal: {
-            //             areaColor: '',
-            //             borderColor: '#0053FD'
-            //         }
-            //     },
-            //     label: {
-            //         normal: {
-            //             show: false,  //省份名称
-            //             areaStyle: {
-            //                 backgroundColor: 'rgba(0,0,0,0)'
-            //             },
-            //             textStyle: {
-            //                 color: '#0053FD',
-            //                 fontSize: 12
-            //             }
-            //         },
-            //         emphasis: {
-            //             // show: false
-            //             areaColor: ''
-            //         }
-            //     },
-            //     data: mydata,  //数据
-
-            // }]
         };
 
         // 使用制定的配置项和数据显示图表
@@ -514,8 +456,9 @@
                 subtext: ''
             },
             legend: {
-                data: ['色块0', '色块1', '色块2', '色块3', '色块4', '色块5', '色块6', '色块7', '色块8', '色块9', '色块10', '色块11'],
+                data: ['色块0', '色块1', '色块2', '色块3', '色块4', '色块5', '色块6', '色块7', '色块8', '色块9', '色块10'],
                 bottom: 40,
+                itemWidth: 20,
                 left: 'center',
                 formatter: function (name) {
                     return '';
@@ -528,7 +471,7 @@
                     inside: false,
                     textStyle: {
                         color: '#5CD7FF',
-                        fontSize: 16
+                        fontSize: '0.16rem'
                     }
                 },
                 offset: 60,
@@ -551,7 +494,7 @@
                     show: false,
                     textStyle: {
                         color: '#5CD7FF',
-                        fontSize: 16
+                        fontSize: '0.16rem'
                     }
                 },
                 splitLine: {
@@ -566,8 +509,9 @@
             series: [
                 {
                     type: 'bar',
-                    barWidth: 20,
-                    barMaxWidth: 30,
+                    barWidth: '0.2rem',
+                    barMinWidth: 16,
+                    barMaxWidth: '0.3rem',
                     itemStyle: {
                         normal: {
                             color: new echarts.graphic.LinearGradient(
@@ -583,7 +527,7 @@
                                 position: 'top', //在上方显示
                                 textStyle: { //数值样式
                                     color: '#5CD7FF',
-                                    fontSize: 20,
+                                    fontSize: '0.2rem',
                                     fontWeight: 600
                                 }
                             },
@@ -678,7 +622,7 @@
                 x:'left',
                 textStyle: {
                     color: '#00F0FF',
-                    fontSize: 22
+                    fontSize: '0.22rem'
                 }
             },
             tooltip : {
@@ -722,7 +666,7 @@
                 x:'left',
                 textStyle: {
                     color: '#00F0FF',
-                    fontSize: 22
+                    fontSize: '0.22rem'
                 }
             },
             legend: {
@@ -732,7 +676,7 @@
                 y: '50px',
                 textStyle: {
                     color: '#f00',
-                    fontSize: 16
+                    fontSize: '0.16rem'
                 },
                 data: [ '锦江区', '成华区', '青羊区', '高新区', '天府新区']
             },
@@ -767,7 +711,7 @@
                 x:'left',
                 textStyle: {
                     color: '#00F0FF',
-                    fontSize: 22
+                    fontSize: '0.22rem'
                 }
             },
             legend: {
@@ -777,7 +721,7 @@
                 y: '50px',
                 textStyle: {
                     color: '#E4C100',
-                    fontSize: 16
+                    fontSize: '0.16rem'
                 },
                 data: [ '锦江区', '成华区', '青羊区', '高新区', '天府新区']
             },
@@ -812,7 +756,7 @@
                 x:'left',
                 textStyle: {
                     color: '#00F0FF',
-                    fontSize: 22
+                    fontSize: '0.22rem'
                 }
             },
             legend: {
@@ -822,7 +766,7 @@
                 y: '50px',
                 textStyle: {
                     color: '#FF0000',
-                    fontSize: 16
+                    fontSize: '0.16rem'
                 },
                 data: [ '锦江区', '成华区', '青羊区', '高新区', '天府新区']
             },
